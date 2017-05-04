@@ -3,13 +3,13 @@
 
 ## about swarm secrets
 
-* Secrets are abvailable in **Docker 1.13 and higher**
+* Secrets are available in **Docker 1.13 and higher**
 
 * In terms of Docker Swarm services, a secret is a blob of data, such as a password, SSH private key, SSL certificate, or another piece of data that should not be transmitted over a network or stored unencrypted in a Dockerfile or in your application’s source code.
 
 * Swarm secrets are mounted into services under `/run/secrets` as a [readonly] tmpfs filesystem. They are never exposed as environment variables, nor can they be committed to an image if the docker commit command is run.
 
-* A given secret is only accessible to those services which have been granted explicit access to it, and only while those service tasks are running. ecrets are encrypted during transit and at rest in a Docker swarm.
+* A given secret is only accessible to those services which have been granted explicit access to it, and only while those service tasks are running. Secrets are encrypted during transit and at rest in a Docker swarm.
 
 * See [official documentation](https://docs.docker.com/engine/swarm/secrets/) on swarm secrets for more information and an example of using secrets in a MySQL + Wordpress service.
 
